@@ -1,13 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
-import useAuthUser from "react-auth-kit/hooks/useAuthUser";
 import Env from "../../config/env";
-import { ISignupUserForm, IUserData } from "./types";
+import { ISignupUserForm } from "./types";
 
 
 export default function useLoginServices() {
   const [submitted, setSubmitted] = useState<boolean>(false);
-  const authUser = useAuthUser<IUserData>();
 
   async function userLogin(email: string, password: string) {
     return axios.post(

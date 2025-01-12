@@ -1,20 +1,17 @@
-import { ActionIcon, Burger, Group, Image, Space, TextInput } from "@mantine/core";
+import { Burger, Group, Image, TextInput } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
+import { IconSearch } from "@tabler/icons-react";
 import mainLogo from "../../../../assets/eshop_logo.png";
+import Color from "../../../theme";
 import AccountMenu from "./ui/AccountMenu";
 import NotificationMenu from "./ui/NotificationMenu";
-import { IconArrowRight, IconSearch } from "@tabler/icons-react";
-import { useMediaQuery } from "@mantine/hooks";
-import Color from "../../../theme";
 
 type Props = {
   opened: boolean;
   setOpened: React.Dispatch<React.SetStateAction<boolean>>;
 };
 export default function HeaderMenu({ opened, setOpened }: Props) {
-  const matches = useMediaQuery("(min-width: 	62em)");
-  // const matchesSM = useMediaQuery("(min-width: 	48em)");
   const matchesSM = useMediaQuery("(max-width: 	1024px)");
-  // const navigate = useNavigate();
 
   return (
     <Group h="100%" justify="space-between" bg={"white"} p={"md"}>

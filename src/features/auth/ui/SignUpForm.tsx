@@ -9,7 +9,6 @@ import {
 } from "@mantine/core";
 import { isNotEmpty, useForm } from "@mantine/form";
 import { useEffect } from "react";
-import useSignIn from "react-auth-kit/hooks/useSignIn";
 import { useNavigate } from "react-router";
 import { ISignupUserForm } from "../types";
 import Color from "../../../common/theme";
@@ -18,7 +17,6 @@ import { notifications } from '@mantine/notifications';
 
 function SignUpForm() {
   const navigate = useNavigate();
-  const signIn = useSignIn();
   const { submitted, setSubmitted } = useLoginServices();
 
   const form = useForm<ISignupUserForm>({

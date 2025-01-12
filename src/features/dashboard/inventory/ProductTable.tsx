@@ -1,21 +1,17 @@
 import {
-  Menu,
-  Text,
-  Button,
-  ActionIcon,
-  Table,
-  Image,
-  Badge,
-  Group,
+    Badge,
+    Button,
+    Group,
+    Image,
+    Table,
+    Text
 } from "@mantine/core";
 import {
-  IconChevronDown,
-  IconAdjustmentsHorizontal,
-  IconDots,
+    IconDots
 } from "@tabler/icons-react";
 import { CustomTable } from "../../../common/components/Table/CustomTable";
-import { productData } from "./services";
 import Color from "../../../common/theme";
+import { productData } from "./services";
 
 function ProductTable() {
   const rows = productData.map((row, index) => (

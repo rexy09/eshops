@@ -9,7 +9,7 @@ import { Icon, IconChevronRight, IconProps } from "@tabler/icons-react";
 import React, { useState } from "react";
 import Color from "../../../../theme";
 import classes from "./nav_links.module.css";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router";
 import react from "react";
 
 type Props = {
