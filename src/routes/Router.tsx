@@ -17,17 +17,6 @@ export const router = createBrowserRouter(
     <>
       {/* <Route path="/">
         <Route index element={<Home />} />
-        <Route element={<PublicLayout />}>
-          <Route
-            path="/resource_details/:id"
-            element={<MaterialDetailsPage />}
-          />
-          <Route
-            path="/public_material_upload"
-            element={<PublicMaterialUploadPage />}
-          />
-          <Route path="/faqs" element={<HelpFAQs />} />
-        </Route>
       </Route> */}
       <Route
         element={
