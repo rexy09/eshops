@@ -15,9 +15,13 @@ import { NotFound } from "../pages/NotFound";
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      {/* <Route path="/">
-        <Route index element={<Home />} />
-      </Route> */}
+      <Route path="/">
+        {/* <Route index element={<Home />} /> */}
+        <Route element={<AuthLayout />}>
+          <Route index element={<SignUpPage />} />
+        </Route>
+        
+      </Route>
       <Route
         element={
           // <RequireAuth loginPath={"/login"}>

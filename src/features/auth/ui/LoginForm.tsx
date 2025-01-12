@@ -95,7 +95,7 @@ function LoginForm() {
         <Text c={Color.TextTertiary} size="16px" fw={400} style={{ lineHeight: "24px" }}>Phone Number </Text>
         <Space h="xs" />
         <TextInput
-          placeholder="Enter your Phone Number"
+          placeholder="Enter your Phone Number eg. 0787654321"
           radius={"md"}
           size="md"
           variant="filled"
