@@ -111,7 +111,7 @@ function Sidebar({ setOpened }: SidebarProps) {
             <Space h="30px" />
             <NavLinkButton
               setOpened={setOpened}
-              to={"/logout"}
+              to={"/login"}
               label={"Log Out"}
               icon={IconLogout}
             />
