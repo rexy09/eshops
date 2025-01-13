@@ -46,7 +46,7 @@ yarn dev
 ```
 Visit http://localhost:5173 in your browser to see the app.
 
-## Login Credentials
+### Login Credentials
 - phone number: 0787654321
 - pass: 0787654321
 
