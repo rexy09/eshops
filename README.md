@@ -88,13 +88,12 @@ This project structure organizes a React application into different directories 
 │   │           ├── login_form.tsx
 │   │           └── signup_form.tsx
 │   ├── dashboard
-│   │   ├── account
+│   │   ├── home
 │   │   │   ├── services.ts
 │   │   │   ├── stores.ts
 │   │   │   ├── types.ts
 │   │   │   └── ui
-│   │   │       ├── change_password_modal.tsx
-│   │   │       └── user_info.tsx
+│   │   │       ├── DashboardStatistics.tsx
 │   └── eshop
 ├── index.css
 ├── main.tsx
