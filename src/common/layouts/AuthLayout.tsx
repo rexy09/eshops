@@ -53,6 +53,12 @@ function AuthLayout() {
                                 <Text size="56px" fw={600} c={"white"} style={{ lineHeight: "67.2px", letterSpacing: "-2px" }}>Please sign in to securely access your account.</Text>
                                 <Space h="lg" />
                                 <Text size="18px" fw={500} c={"white"} style={{ lineHeight: "24px" }}>Welcome back! We're thrilled to have you return to our platform. Your presence means a lot to us.</Text>
+                                <Space h="50px" />
+                                <Group>
+                                    <div style={{ width: "20px", height: "4px", borderRadius: "100px", backgroundColor: "#FFFFFF" }}></div>
+                                    <div style={{ width: "20px", height: "4px", borderRadius: "100px", backgroundColor: "#CED1D8" }}></div>
+                                    <div style={{ width: "20px", height: "4px", borderRadius: "100px", backgroundColor: "#CED1D8" }}></div>
+                                </Group>
                             </div>
                             <Space h="50px" />
 

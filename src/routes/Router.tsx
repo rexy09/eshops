@@ -10,16 +10,15 @@ import SignUpPage from "../pages/auth/SignUpPage";
 import DashboardPage from "../pages/dashboard/DashboardPage";
 import InventoryPage from "../pages/dashboard/InventoryPage";
 import { NotFound } from "../pages/NotFound";
+import ShopLayout from "../common/layouts/ShopLayout";
+import HomePage from "../pages/shop/HomePage";
 
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/">
-        {/* <Route index element={<Home />} /> */}
-        <Route element={<AuthLayout />}>
-          <Route index element={<SignUpPage />} />
-        </Route>
+      <Route path="/" element={<ShopLayout />}>
+        <Route index element={<HomePage />} />
         
       </Route>
       <Route
