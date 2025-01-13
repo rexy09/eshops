@@ -1,5 +1,6 @@
 import {
   CloseButton,
+  Divider,
   Group,
   Image,
   Paper,
@@ -57,7 +58,7 @@ function Sidebar({ setOpened }: SidebarProps) {
             <Group mt={"xs"}>
               <Image radius="md" w={"200px"} src={mainLogo} alt="logo image" />
             </Group>
-            <Space h="md" />
+            <Divider my="md" />
             <Group hiddenFrom="md">
               <Paper p={"md"} radius="md" w={"100%"}>
                 <Group justify="space-between">
