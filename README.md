@@ -6,7 +6,7 @@ A Vite + React project for eCommerce.
 
 These instructions will help you set up and run the project on your local machine for development and testing purposes.
 
-## Demo Link
+### Demo Link
 [Vercel Link](https://eshops-tau.vercel.app)
 
 Login Credentials
