@@ -39,6 +39,10 @@ yarn dev
 ```
 Visit http://localhost:5173 in your browser to see the app.
 
+## Login Credentials
+phone number: 0787654321
+pass: 0787654321
+
 ## Building for Production
 To build the project for production, run:
 ```bash
