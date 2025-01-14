@@ -8,6 +8,7 @@ import { RouterProvider } from 'react-router';
 import { router } from './routes/Router';
 import { Notifications } from '@mantine/notifications';
 import '@mantine/charts/styles.css';
+import '@mantine/carousel/styles.css';
 
 const theme = createTheme({
   fontFamily: "Inter",
