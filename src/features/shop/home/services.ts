@@ -11,7 +11,6 @@ import leaf from "../../../assets/leaf.png";
 import shopping_bag from "../../../assets/shopping_bag.png";
 
 export default function useShopServices() {
-  // const [submitted, setSubmitted] = useState<boolean>(false);
 
   async function getProducts() {
     return axios.get("https://fakestoreapi.com/products");

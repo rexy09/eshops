@@ -1,4 +1,5 @@
 import {
+  ActionIcon,
   Button,
   Card,
   Divider,
@@ -13,7 +14,7 @@ import {
 } from "@mantine/core";
 
 import { notifications } from "@mantine/notifications";
-import { IconChevronDown } from "@tabler/icons-react";
+import { IconChevronDown, IconFilterFilled } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import Color from "../../../../common/theme";
 import useShopServices from "../services";
@@ -69,7 +70,7 @@ export function ProductList() {
 
   return (
     <Grid>
-      <Grid.Col span={3}>
+      <Grid.Col span={{ base: 12, sm: 4, lg: 3 }} visibleFrom="sm">
         <Card withBorder radius={"md"}>
           <Space h="lg" />
           <Text
@@ -125,13 +126,15 @@ export function ProductList() {
           </Button>
         </Card>
       </Grid.Col>
-      <Grid.Col span={9}>
+      <Grid.Col span={{ base: 12, sm: 8, lg: 9 }}>
         <Group justify="space-between">
           <Text size="32px" fw={700} style={{ fontFamily: "Urbanist" }}>
             Products
           </Text>
+          <Group >
           <Menu width={220} withinPortal>
             <Menu.Target>
+             
               <Button
                 color="black"
                 variant="default"
@@ -147,10 +150,75 @@ export function ProductList() {
               <Menu.Item>Jan - Jul, 2024</Menu.Item>
             </Menu.Dropdown>
           </Menu>
+          <Group hiddenFrom="sm">
+
+          <Menu width={300} withinPortal >
+            <Menu.Target>
+              <ActionIcon variant="subtle" aria-label="Settings" color="gray">
+                  <IconFilterFilled size={30} stroke={1.5} />
+              </ActionIcon>
+            </Menu.Target>
+            <Menu.Dropdown>
+              <Card  radius={"md"}>
+                <Space h="lg" />
+                <Text
+                  size="24px"
+                  fw={700}
+                  c={"#262D33"}
+                  style={{ fontFamily: "Urbanist" }}
+                >
+                  Categories
+                </Text>
+                <Divider my="md" />
+
+                <Text size="19px" fw={600} c={Color.PrimaryBlue}>
+                  All
+                </Text>
+                <Space h="md" />
+
+                {categories.map((item, index) => (
+                  <div key={index}>
+                    <Text size="19px" fw={500} c={"#262D33"}>
+                      {item.name}
+                    </Text>
+                    <Space h="md" />
+                  </div>
+                ))}
+              </Card>
+              <Card  radius={"md"}>
+                <Text
+                  size="24px"
+                  fw={700}
+                  c={"#262D33"}
+                  style={{ fontFamily: "Urbanist" }}
+                >
+                  Price
+                </Text>
+                <Divider my="md" />
+                <Text size="15px" fw={500} c={"#262D33"}>
+                  Lowest
+                </Text>
+                <Space h="sm" />
+                <TextInput placeholder="Lowest price" radius={"xl"} />
+                <Space h="md" />
+                <Text size="15px" fw={500} c={"#262D33"}>
+                  Highest
+                </Text>
+                <Space h="sm" />
+                <TextInput placeholder="Highest price" radius={"xl"} />
+                <Space h="md" />
+                <Button fullWidth size="lg" radius={"md"} color={Color.PrimaryBlue}>
+                  Apply
+                </Button>
+              </Card>
+            </Menu.Dropdown>
+          </Menu>
+          </Group>
+        </Group>
         </Group>
         <Space h="md" />
         <SimpleGrid
-          cols={{ base: 2, sm: 3, lg: 3 }}
+          cols={{ base: 2, sm: 2, lg: 3 }}
           spacing="sm"
           verticalSpacing="sm"
         >

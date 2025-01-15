@@ -103,8 +103,8 @@ export function MyCart() {
   return (
     <div>
       <Grid>
-        <Grid.Col span={8}>{items}</Grid.Col>
-        <Grid.Col span={4}>
+        <Grid.Col span={{ base: 12, sm: 8 }}>{items}</Grid.Col>
+        <Grid.Col span={{ base: 12, sm: 4 }}>
           <Card withBorder radius={"md"}>
             <Space h="lg" />
             <Text size="24px" fw={600} c={"#1B1B1B"}>

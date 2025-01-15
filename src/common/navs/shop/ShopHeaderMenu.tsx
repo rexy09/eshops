@@ -27,14 +27,16 @@ type Props = {
 };
 export default function ShopHeaderMenu({ opened, setOpened }: Props) {
   const matchesSM = useMediaQuery("(max-width: 	1024px)");
-const cartStore = useCartStore();
+  const cartStore = useCartStore();
   const navigate = useNavigate();
 
   return (
     <Group h="100%" justify="space-between" bg={"white"} p={"md"}>
-      <Link to={"/"}>
-      <Image radius="md" w={"130px"} src={mainLogo} alt="logo image" />
-      </Link>
+      <Group visibleFrom="md">
+        <Link to={"/"}>
+          <Image radius="md" w={"130px"} src={mainLogo} alt="logo image" />
+        </Link>
+      </Group>
 
       <Group visibleFrom="md">
         <Button
@@ -71,14 +73,18 @@ const cartStore = useCartStore();
         />
       </Group>
       <Group visibleFrom="md">
+        <Link to={"/products"} >
         <ActionIcon color="#EDEDED" variant="outline" size="lg" radius="xl">
           <IconSearch size={20} stroke={1.5} color="#0070CD" />
         </ActionIcon>
-        <Indicator color="#D91F11" size={15} offset={8} label={cartStore.totalItems}>
+        </Link>
+        <Link to={"/cart"} >
+          <Indicator color="#D91F11" size={15} offset={8} disabled={cartStore.totalItems > 0 ? false : true} label={cartStore.totalItems }>
           <ActionIcon color="#EDEDED" variant="outline" size="lg" radius="xl" onClick={() => { navigate("/cart"); }}>
             <IconShoppingBag size={20} stroke={1.5} color="#0070CD" />
           </ActionIcon>
         </Indicator>
+        </Link>
         <ActionIcon color="#EDEDED" variant="outline" size="lg" radius="xl">
           <IconUser size={20} stroke={1.5} color="#0070CD" />
         </ActionIcon>
@@ -92,6 +98,26 @@ const cartStore = useCartStore();
             hiddenFrom="md"
           />
         </Group>
+      </Group>
+      <Group hiddenFrom="md">
+        <Link to={"/"} onClick={() => {
+          if (opened) {
+            setOpened(false);
+          }
+
+        }} >
+          <Image radius="md" w={"130px"} src={mainLogo} alt="logo image" />
+        </Link>
+      </Group>
+      <Group hiddenFrom="md">
+        <Link to={"/products"} onClick={() => {
+          if (opened) {
+            setOpened(false);
+          }
+
+        }} >
+          <IconSearch size={24} stroke={1.5} color="#262D33" />
+        </Link>
       </Group>
     </Group>
   );

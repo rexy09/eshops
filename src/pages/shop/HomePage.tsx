@@ -25,7 +25,7 @@ export default function HomePage() {
         <div>
           <Stack
             pl={"xl"}
-            h={"50vh"}
+            mih={mobile?"50vh":"50vh"}
             align="flex-start"
             justify="center"
             gap="0"
