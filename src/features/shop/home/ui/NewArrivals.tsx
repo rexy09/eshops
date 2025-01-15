@@ -44,6 +44,7 @@ export function NewArrivals() {
 
   };
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchData();
   }, []);
   const slides = products.map((p, index) => (

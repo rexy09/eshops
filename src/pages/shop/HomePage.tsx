@@ -2,20 +2,18 @@ import {
   BackgroundImage,
   Button,
   Container,
-  Divider,
   Group,
   Space,
   Stack,
   Text,
-  useMantineTheme,
+  useMantineTheme
 } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import home_bg from "../../assets/home_bg.png";
 import Color from "../../common/theme";
-import { useMediaQuery } from "@mantine/hooks";
+import { FeaturedProducts } from "../../features/shop/home/ui/FeaturedProducts";
 import { NewArrivals } from "../../features/shop/home/ui/NewArrivals";
 import { ShopByCategory } from "../../features/shop/home/ui/ShopByCategory";
-import { FeaturedProducts } from "../../features/shop/home/ui/FeaturedProducts";
-import { Features } from "../../features/shop/home/ui/Features";
 export default function HomePage() {
   const theme = useMantineTheme();
 
@@ -120,12 +118,6 @@ export default function HomePage() {
       <Space h="50px" />
       <Container size="xl">
         <FeaturedProducts />
-      </Container>
-      <Space h="30px" />
-      <Divider />
-      <Space h="50px" />
-      <Container size="xl">
-        <Features />
       </Container>
     </>
   );

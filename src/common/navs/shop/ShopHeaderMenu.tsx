@@ -18,6 +18,8 @@ import {
 } from "@tabler/icons-react";
 import mainLogo from "../../../assets/eshop_logo.png";
 import Color from "../../theme";
+import { useCartStore } from "../../../features/shop/home/stores";
+import { Link, useNavigate } from "react-router";
 
 type Props = {
   opened: boolean;
@@ -25,10 +27,14 @@ type Props = {
 };
 export default function ShopHeaderMenu({ opened, setOpened }: Props) {
   const matchesSM = useMediaQuery("(max-width: 	1024px)");
+const cartStore = useCartStore();
+  const navigate = useNavigate();
 
   return (
     <Group h="100%" justify="space-between" bg={"white"} p={"md"}>
+      <Link to={"/"}>
       <Image radius="md" w={"130px"} src={mainLogo} alt="logo image" />
+      </Link>
 
       <Group visibleFrom="md">
         <Button
@@ -68,8 +74,8 @@ export default function ShopHeaderMenu({ opened, setOpened }: Props) {
         <ActionIcon color="#EDEDED" variant="outline" size="lg" radius="xl">
           <IconSearch size={20} stroke={1.5} color="#0070CD" />
         </ActionIcon>
-        <Indicator color="#D91F11" size={15} offset={8} label="4">
-          <ActionIcon color="#EDEDED" variant="outline" size="lg" radius="xl">
+        <Indicator color="#D91F11" size={15} offset={8} label={cartStore.totalItems}>
+          <ActionIcon color="#EDEDED" variant="outline" size="lg" radius="xl" onClick={() => { navigate("/cart"); }}>
             <IconShoppingBag size={20} stroke={1.5} color="#0070CD" />
           </ActionIcon>
         </Indicator>

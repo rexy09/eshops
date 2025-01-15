@@ -12,6 +12,10 @@ import InventoryPage from "../pages/dashboard/InventoryPage";
 import { NotFound } from "../pages/NotFound";
 import ShopLayout from "../common/layouts/ShopLayout";
 import HomePage from "../pages/shop/HomePage";
+import CartPage from "../pages/shop/CartPage";
+import ProductPage from "../pages/shop/ProductPage";
+import ProductDetailsPage from "../pages/shop/ProductDetailsPage";
+
 
 
 export const router = createBrowserRouter(
@@ -19,7 +23,12 @@ export const router = createBrowserRouter(
     <>
       <Route path="/" element={<ShopLayout />}>
         <Route index element={<HomePage />} />
-        
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/products" element={<ProductPage />} />
+        <Route
+          path="/product_details/:id"
+          element={<ProductDetailsPage />}
+        />
       </Route>
       <Route
         element={

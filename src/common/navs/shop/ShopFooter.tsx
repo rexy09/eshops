@@ -18,12 +18,19 @@ import mainLogo from "../../../assets/eshop_logo_2.png";
 import Color from "../../theme";
 import FooterHeading from "./components/footer_heading";
 import FooterText from "./components/footer_text";
+import { Features } from "../../../features/shop/home/ui/Features";
 
 export default function ShopFooter() {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
   return (
     <>
+      <Space h="50px" />
+      <Divider />
+      <Space h="50px" />
+      <Container size="xl">
+        <Features />
+      </Container>
           <Space h="50px" />
       <div style={{ width: "100%", background: Color.DarkBlue }}>
         <Container size={"xl"} py="30px">

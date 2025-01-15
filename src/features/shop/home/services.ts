@@ -16,6 +16,9 @@ export default function useShopServices() {
   async function getProducts() {
     return axios.get("https://fakestoreapi.com/products");
   }
+  async function getProductDetails(id:string) {
+    return axios.get("https://fakestoreapi.com/products/" + id);
+  }
   const categories = [
     {
       name: "Rice",
@@ -65,6 +68,7 @@ export default function useShopServices() {
 
   return {
     getProducts,
+    getProductDetails,
     categories,
     features,
   };
