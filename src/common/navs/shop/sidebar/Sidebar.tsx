@@ -43,7 +43,7 @@ function Sidebar({ setOpened }: SidebarProps) {
               <ActionIcon color="#EDEDED" variant="outline" size="lg" radius="xl" onClick={() => { navigate("/products"); setOpened(false); }}>
                 <IconSearch size={20} stroke={1.5} color="#0070CD" />
               </ActionIcon>
-              <Indicator color="#D91F11" size={15} offset={8} label={cartStore.totalItems}>
+              <Indicator color="#D91F11" size={15} offset={8} disabled={cartStore.totalItems > 0 ? false : true} label={cartStore.totalItems}>
                 <ActionIcon color="#EDEDED" variant="outline" size="lg" radius="xl" onClick={() => { navigate("/cart"); setOpened(false); }}>
                   <IconShoppingBag size={20} stroke={1.5} color="#0070CD" />
                 </ActionIcon>
